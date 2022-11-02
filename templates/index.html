@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html >
+<body  align="center" style="background-color:yellow;">
+<head>
+  <meta charset="UTF-8">
+  <title>Model Deployment</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <style>
+      body {
+        font-family: 'Tangerine', serif;
+        font-size: 28px;
+      }
+    </style>
+
+
+</head>
+
+<body>
+ <div class="login">
+	<h1 style="text-align:center">Churn Analytics</h1>
+
+    <form align="center" action="{{ url_for('predict')}}"method="post">
+    	<input type="text" style="text-align:center" name="last_day_rch_amt_8" placeholder="last day recharge amt_8" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="loc_ic_t2m_mou_8" placeholder="loc ic t2m min_8" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="avg_rech_amt_goodphase" placeholder="avg_rech_amt_goodphase" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="last_rech_days_8" placeholder="last_rech_days_8" required="required" />
+        <br>
+		<input type="text" style="text-align:center" name="loc_og_mou_8" placeholder="loc og min_8" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="loc_ic_mou_7" placeholder="loc ic min_7" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="total_og_mou_8" placeholder="total og min_8" required="required" />
+        <br>
+		<input type="text" style="text-align:center" name="loc_ic_t2f_mou_8" placeholder="loc ic t2f min_8" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="monthly_3g_8" placeholder="monthly 3g 8" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="loc_ic_t2t_mou_8" placeholder="loc ic t2t min_8" required="required" />
+        <br>
+		<input type="text" style="text-align:center" name="vol_2g_mb_8" placeholder="vol 2g mb_8" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="monthly_2g_8" placeholder="monthly 2g_8" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="total_rech_num_8" placeholder="total rech_8" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="total_ic_mou_8" placeholder="total ic min_8" required="required" />
+        <br>
+
+
+        <button align="center" type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+     {{ prediction_text }}
+     
+      
+
+ </div>
+
+
+</body>
+</html>
